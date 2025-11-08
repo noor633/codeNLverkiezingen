@@ -1,0 +1,262 @@
+  :root {
+    --blue-flap: #2c2c2c;
+    --bg-surface: #1a1a1a;
+    --card-bg: #242424;
+    --muted: #a0a0a0;
+    --text: #ffffff;
+    --accent-red: #ff4444;
+    --soft-shadow: 0 8px 24px rgba(0,0,0,0.35);
+    
+    .item {
+      background: var(--card-bg);
+      border-color: rgba(255,255,255,0.05);
+    }
+    
+    .search input {
+      background: #2a2a2a;
+      border-color: rgba(255,255,255,0.05);
+      color: var(--text);
+    }
+    
+    .item:hover {
+      background: #2a2a2a;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+    }
+    
+    .confirm {
+      background: var(--card-bg);
+      border-color: rgba(255,255,255,0.05);
+    }
+
+    .vote-card {
+      background: var(--card-bg);
+      border-color: rgba(255,255,255,0.05);
+    }
+
+    .nl-badge {
+      background: rgba(255,255,255,0.08);
+    }
+
+    .card {
+      border-color: rgba(255,255,255,0.05);
+    }
+
+    .tagline {
+      color: var(--muted);
+    }
+
+    .logo {
+      border-color: rgba(255,255,255,0.08);
+    }
+
+    .radio {
+      border-color: rgba(255,255,255,0.2);
+    }
+
+    .list::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.1);
+    }
+  }
+
+  *{box-sizing:border-box}
+  html,body{height:100%;margin:0;font-family:"Montserrat",system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial}
+
+body{
+  background:var(--bg-surface);
+  color:var(--text);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:28px;
+  height:100vh;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+  #partyList {
+  height: 100%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper{
+  width:100%;
+  max-width:1200px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.vote-wrap {
+  width: 100%;
+}
+
+  .card{
+    background:var(--card-bg);
+    border-radius:var(--radius);
+    box-shadow:var(--soft-shadow);
+    border:1px solid rgba(15,23,36,0.04);
+    overflow:hidden;
+  }
+
+  .flap{
+    background:var(--blue-flap);
+    color:#fff;
+    padding:18px 20px;
+    display:flex;
+    gap:12px;
+    align-items:center;
+    font-weight:700;
+    letter-spacing:0.4px;
+    font-size:17px;
+  }
+  .nl-badge{
+    background:rgba(255,255,255,0.12);
+    padding:6px 10px;
+    border-radius:6px;
+    font-weight:800;
+    color:#fff;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+  }
+
+  .card-body{padding:18px}
+
+  .title{font-size:18px;font-weight:700;margin-bottom:6px}
+  .subtitle{color:var(--muted);font-size:13px;margin-bottom:14px;line-height:1.35}
+
+  .controls{display:flex;gap:12px;margin-bottom:12px;align-items:center}
+  .search{flex:1;position:relative}
+  .search input{width:100%;padding:12px 12px;padding-left:40px;border-radius:10px;border:1px solid rgba(15,23,36,0.06);background:#fbfbfd;color:var(--text);font-size:14px}
+  .search svg{position:absolute;left:12px;top:50%;transform:translateY(-50%);opacity:0.6}
+
+  .vote-wrap{display:flex;flex-direction:column;gap:16px}
+.vote-card {
+  width: 100%;
+  background: var(--card-bg);
+  border-radius: 16px;
+  box-shadow: var(--soft-shadow);
+  border: 1px solid rgba(255,255,255,0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.confirm {
+  display: none;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+  padding: 24px;
+  margin: 20px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.05);
+  font-weight: 700;
+  color: var(--accent-red);
+  font-size: 18px;
+}
+  .top-row{display:flex;justify-content:space-between;align-items:center}
+  .top-row .small{font-size:12px;color:var(--muted)}
+
+  .list{max-height:calc(100vh - 320px);overflow:auto;display:grid;gap:12px;padding-right:6px;padding-top:6px}
+  #partyList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  background: var(--card-bg);
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: transform .2s, box-shadow .2s;
+  cursor: pointer;
+}
+
+.item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+  background: #2a2a2a;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(0,0,0,0.2);
+  padding: 4px;
+}
+
+.meta {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.name {
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--text);
+}
+
+.tagline {
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--muted);
+}
+
+  .radio{width:22px;height:22px;border-radius:50%;border:2px solid rgba(100,110,125,0.7);flex-shrink:0;transition:all .25s ease}
+  .item.selected .radio{background:var(--accent-red);border-color:var(--accent-red);box-shadow:0 6px 18px rgba(229,57,53,0.14)}
+
+  .confirm{display:none;align-items:center;gap:12px;justify-content:center;padding:18px;border-radius:10px;background:var(--card-bg);border:1px solid rgba(15,23,36,0.04);font-weight:700;color:var(--accent-red)}
+  .vote-card.voted{transform:translateY(-6px);opacity:0.98}
+  .vote-card.voted .list{display:none}
+  .vote-card.voted .confirm{display:flex}
+
+  .footer{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--muted);margin-top:6px}
+
+  .list::-webkit-scrollbar{width:8px}
+  .list::-webkit-scrollbar-thumb{background:rgba(15,23,36,0.06);border-radius:6px}
+  .list::-webkit-scrollbar-track{background:transparent}
+  .list{
+  flex:1;
+  overflow-y:auto;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  padding:6px;
+  height:100%;
+  max-height:unset;
+}
+.item{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:12px;
+  border-radius:10px;
+  background:#fff;
+  border:1px solid rgba(15,23,36,0.04);
+  transition:transform .14s,box-shadow .14s,background .14s;
+  cursor:pointer;
+}
+.item:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(15,23,36,0.06)}
+
+  @media (max-width: 1000px) {
+    #partyList {
+      grid-template-columns: 1fr;
+    }
+    .wrapper {
+      padding: 10px;
+    }
+    .item {
+      padding: 15px;
+    }
+  }
